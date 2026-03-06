@@ -1,0 +1,1 @@
+## 2026-03-06\n\n- **Milestone**: OpenClaw GitHub Stars surpassed 250k (News: 2026-03-04).\n- **Release**: OpenClawd platform major update.\n- **Plugin Update**: @openclaw/zalouser no longer requires external binaries (Breaking Change).\n- **Community**: HKUDS/ClawWork updated with multi-model support.\n\n[Full Report](https://feishu.cn/docx/TN5kdaJqBoZJcbxMNv4c0rfmnjd)\n
