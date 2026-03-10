@@ -5,6 +5,7 @@
 - [Troubleshooting](troubleshooting.md)
 - [Use Cases](usecases.md)
 - [Contributors](contributors.md)
+- [Roadmap](roadmap.md)
 * 🛠️ **The Toolkit**
   * [Survival Guide](hacks/survival-guide.md)
   * [Context Magic](hacks/context.md)
