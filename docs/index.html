@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
   <meta charset="UTF-8">
   <title>OpenClaw News & Hacks</title>
@@ -7,10 +7,11 @@
   <meta name="description" content="Daily intelligence, wild hacks, and profitable strategies for OpenClaw users.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css" />
+  <link rel="stylesheet" href="custom.css">
 </head>
 <body>
   <div id="app">Loading the Lobster... 🦞</div>
-  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
   <script>
     window.$docsify = {
       name: 'OpenClaw News 🦞',
@@ -22,63 +23,82 @@
               return html;
             }
             var url = 'https://github.com/jiransc/OpenClawNews/blob/main/docs/' + vm.route.file;
-            var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n\n';
+            var editHtml = '[📝 编辑此页](' + url + ')\n\n';
             return editHtml + html;
           });
         }
       ],
       loadSidebar: true,
-      loadNavbar: true,
       coverpage: true,
       subMaxLevel: 2,
-      nameLink: {
-        '/zh-cn/': '#/zh-cn/',
-        '/en/': '#/en/',
-        '/': '#/en/'
-      },
-      fallbackLanguages: ['en', 'zh-cn'],
       search: {
         maxAge: 86400000,
         paths: "auto",
-        placeholder: {
-          '/zh-cn/': '搜索',
-          '/': 'Type to search'
-        },
-        noData: {
-          '/zh-cn/': '找不到结果',
-          '/': 'No Results'
-        },
+        placeholder: "搜索",
+        noData: "找不到结果",
         depth: 6,
         hideOtherSidebarContent: false,
+        namespace: "openclaw-news",
       },
       footer: {
         copy: "<span>OpenClaw &copy; 2024</span>",
         auth: "by the OpenClaw Community",
         pre: "<hr/>",
-        style: "text-align: right;"
+        style: "text-align: right;",
+        class: "className"
+      },
+      tabs: {
+        persist: true,
+        sync: true,
+        theme: "classic",
+        tabComments: true,
+        tabHeadings: true
       },
       pagination: {
-        previousText: 'PREV',
-        nextText: 'NEXT',
-        crossChapter: true
+        previousText: "上一页",
+        nextText: "下一页",
+        crossChapter: true,
+        crossChapterText: true,
       },
       scrollToTop: {
         auto: true,
-        text: "Top",
+        text: "返回顶部",
         right: 15,
         bottom: 15,
         offset: 500
       },
       copyCode: {
-        buttonText : 'Copy',
-        errorText  : 'Error',
-        successText: 'Copied'
+        buttonText : '复制',
+        errorText  : '出错了',
+        successText: '已复制'
+      },
+      darklightTheme: {
+        siteFont : "PT Sans",
+        defaultTheme : 'dark',
+        codeFontFamily : 'Roboto Mono, Monaco, courier, monospace',
+        bodyFontSize : '17px',
+        dark: {
+          accent: '#42b983',
+          toogleBackground : '#ffffff',
+          background: '#091a28',
+          textColor: '#b4b4b4',
+          codeTextColor : '#ffffff',
+          codeBackgroundColor : '#0e2233',
+          borderColor : '#0d2538',
+          blockQuoteColour : '#858585',
+          highlightColor : '#d22778',
+          sidebarSublink : '#b4b4b4',
+          codeTypeColor : '#ffffff',
+          coverBackground : 'linear-gradient(to left bottom, hsl(118, 100%, 85%) 0%,hsl(181, 100%, 85%) 100%)',
+          toogleImage : 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/sun.svg)'
+        }
       }
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
   <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
