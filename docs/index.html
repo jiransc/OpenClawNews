@@ -21,7 +21,15 @@
       loadSidebar: true,
       coverpage: true,
       subMaxLevel: 2,
-      search: 'auto',
+      search: {
+        maxAge: 86400000,
+        paths: "auto",
+        placeholder: "Type to search",
+        noData: "No Results!",
+        depth: 6,
+        hideOtherSidebarContent: false,
+        namespace: "openclaw-news",
+      },
       tabs: {
         persist: true,
         sync: true,
