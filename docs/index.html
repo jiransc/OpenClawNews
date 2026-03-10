@@ -7,17 +7,25 @@
   <meta name="description" content="Daily intelligence, wild hacks, and profitable strategies for OpenClaw users.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css" />
-  <link rel="stylesheet" href="custom.css">
 </head>
 <body>
   <div id="app">Loading the Lobster... 🦞</div>
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
   <script>
     window.$docsify = {
       name: 'OpenClaw News 🦞',
       repo: 'jiransc/OpenClawNews',
       plugins: [
-        EditOnGithubPlugin.create('https://github.com/jiransc/OpenClawNews/blob/main/docs/')
+        function(hook, vm) {
+          hook.beforeEach(function(html) {
+            if (/githubusercontent\.com/.test(html)) {
+              return html;
+            }
+            var url = 'https://github.com/jiransc/OpenClawNews/blob/main/docs/' + vm.route.file;
+            var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n\n';
+            return editHtml + html;
+          });
+        }
       ],
       loadSidebar: true,
       loadNavbar: true,
@@ -69,10 +77,8 @@
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github@1"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
   <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
