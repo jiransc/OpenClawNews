@@ -3,6 +3,7 @@
   * [Timeline History](Timeline.md)
 - [Quick Start](quickstart.md)
 - [Troubleshooting](troubleshooting.md)
+- [Use Cases](usecases.md)
 * 🛠️ **The Toolkit**
   * [Survival Guide](hacks/survival-guide.md)
   * [Context Magic](hacks/context.md)
