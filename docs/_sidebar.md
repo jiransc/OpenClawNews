@@ -1,6 +1,7 @@
 * 🦞 **Home**
   * [Daily Intelligence](README.md)
   * [Timeline History](Timeline.md)
+- [Quick Start](quickstart.md)
 * 🛠️ **The Toolkit**
   * [Survival Guide](hacks/survival-guide.md)
   * [Context Magic](hacks/context.md)
