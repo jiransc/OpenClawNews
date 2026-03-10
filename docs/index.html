@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>OpenClaw News & Hacks | The Unofficial Guide</title>
+  <title>OpenClaw News & Hacks</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Daily intelligence, wild hacks, and profitable strategies for OpenClaw users.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -20,36 +20,39 @@
         EditOnGithubPlugin.create('https://github.com/jiransc/OpenClawNews/blob/main/docs/')
       ],
       loadSidebar: true,
+      loadNavbar: true,
       coverpage: true,
       subMaxLevel: 2,
+      nameLink: {
+        '/zh-cn/': '#/zh-cn/',
+        '/en/': '#/en/',
+        '/': '#/en/'
+      },
+      fallbackLanguages: ['en', 'zh-cn'],
       search: {
         maxAge: 86400000,
         paths: "auto",
-        placeholder: "Type to search",
-        noData: "No Results!",
+        placeholder: {
+          '/zh-cn/': '搜索',
+          '/': 'Type to search'
+        },
+        noData: {
+          '/zh-cn/': '找不到结果',
+          '/': 'No Results'
+        },
         depth: 6,
         hideOtherSidebarContent: false,
-        namespace: "openclaw-news",
       },
       footer: {
         copy: "<span>OpenClaw &copy; 2024</span>",
         auth: "by the OpenClaw Community",
         pre: "<hr/>",
-        style: "text-align: right;",
-        class: "className"
-      },
-      tabs: {
-        persist: true,
-        sync: true,
-        theme: "classic",
-        tabComments: true,
-        tabHeadings: true
+        style: "text-align: right;"
       },
       pagination: {
-        previousText: "PREV",
-        nextText: "NEXT",
-        crossChapter: true,
-        crossChapterText: true,
+        previousText: 'PREV',
+        nextText: 'NEXT',
+        crossChapter: true
       },
       scrollToTop: {
         auto: true,
@@ -59,30 +62,9 @@
         offset: 500
       },
       copyCode: {
-        buttonText : 'Copy to clipboard',
+        buttonText : 'Copy',
         errorText  : 'Error',
         successText: 'Copied'
-      },
-      darklightTheme: {
-        siteFont : "PT Sans",
-        defaultTheme : 'dark',
-        codeFontFamily : 'Roboto Mono, Monaco, courier, monospace',
-        bodyFontSize : '17px',
-        dark: {
-          accent: '#42b983',
-          toogleBackground : '#ffffff',
-          background: '#091a28',
-          textColor: '#b4b4b4',
-          codeTextColor : '#ffffff',
-          codeBackgroundColor : '#0e2233',
-          borderColor : '#0d2538',
-          blockQuoteColour : '#858585',
-          highlightColor : '#d22778',
-          sidebarSublink : '#b4b4b4',
-          codeTypeColor : '#ffffff',
-          coverBackground : 'linear-gradient(to left bottom, hsl(118, 100%, 85%) 0%,hsl(181, 100%, 85%) 100%)',
-          toogleImage : 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/sun.svg)'
-        }
       }
     }
   </script>
@@ -96,7 +78,5 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
   <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-12345678"></script>
 </body>
 </html>
