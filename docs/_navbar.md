@@ -1,1 +1,3 @@
-* [🇺🇸 English](en/)\n* [🇨🇳 中文](zh-cn/)
+* 🌐 Language
+  * [🇺🇸 English](en/)
+  * [🇨🇳 中文](zh-cn/)
