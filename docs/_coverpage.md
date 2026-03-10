@@ -2,7 +2,7 @@
 
 # OpenClaw News 🦞 <small>Unofficial</small>
 
-> The "Wild" Guide to AI Agents, Hacks, and Profits.
+> OpenClaw News: Unleash the Lobster, Hack the Planet.
 
 *   Daily Intelligence
 *   Survival Guide
