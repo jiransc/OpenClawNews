@@ -1,3 +1,10 @@
+## 2026-03-12
+
+- **Official**: ACP/Provenance added (ingress metadata), web search provider ordering updated.
+- **Community**: "@cnakazawa: When you experience @openclaw it gives the same kick..."
+
+[Full Report (Feishu)](https://www.feishu.cn/docx/PqrvdMG9Boo4KLxp79Yc64s8nYf)
+
 ## 2026-03-08
 
 - **Official**: Grok `web_search` conflict fixed (xAI native support).
